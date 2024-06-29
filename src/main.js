@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import { testFn1, testFn, testName, testName1 } from './utils/test.js';
 import showLoading from './components/myLoading/index.js'
-
+import '@asset/style/reset.css'
 const app = createApp(App);
 
 // 引入并使用自定义指令

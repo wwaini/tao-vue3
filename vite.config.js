@@ -26,12 +26,13 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),
+      '@layout': fileURLToPath(new URL('src/layout', import.meta.url)),
       '@asset': fileURLToPath(new URL('src/asset', import.meta.url)),
-      '@comp': fileURLToPath(new URL('src/comp', import.meta.url)),
+      '@comp': fileURLToPath(new URL('src/components', import.meta.url)),
       '@api': fileURLToPath(new URL('src/api', import.meta.url)),
       '@store': fileURLToPath(new URL('src/store', import.meta.url)),
-      '@utils': fileURLToPath(new URL('src/utils', import.meta.url)),
-      '@view': fileURLToPath(new URL('src/view', import.meta.url)),
+      '@util': fileURLToPath(new URL('src/utils', import.meta.url)),
+      '@view': fileURLToPath(new URL('src/views', import.meta.url)),
     }
   },
   build: {
