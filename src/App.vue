@@ -7,7 +7,7 @@
 
 </script>
 <style scoped>
-#app .theme-picker {
+/* #app .theme-picker {
   display: none;
-}
+} */
 </style>

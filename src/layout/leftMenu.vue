@@ -1,9 +1,9 @@
 <template>
-  <div class="title-center">
+  <div class="title-center left-bg">
     <img v-if="isShowMenuIcon" :src="logoSrc" class="logoC" />
     <span>周小姐</span>
   </div>
-  <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
+  <el-menu :default-active="route.path" class="el-menu-vertical-demo left-bg" @open="handleOpen" @close="handleClose"
     :background-color="theme_bgColor" router :collapse="isCollapse" text-color="auto" active-text-color="auto">
     <el-menu-item index="/">
       <i class="el-icon-s-home"></i>
@@ -17,40 +17,42 @@
 </template>
 <script setup>
 import { ref, reactive } from "vue";
+import { useRoute } from "vue-router";
 import logoSrc from "@asset/logo.jpg";
 const isShowMenuIcon = ref(true)
+const route = useRoute()
 const routeArr = reactive([
   {
     name: 'one',
-    path: '/num/one',
+    path: '/one',
     meta: {
       title: '一叶'
     }
   },
   {
     name: 'two',
-    path: '/num/two',
+    path: '/two',
     meta: {
       title: '二叶'
     }
   },
   {
     name: 'three',
-    path: '/num/three',
+    path: '/three',
     meta: {
       title: '三叶'
     }
   },
   {
     name: 'four',
-    path: '/num/four',
+    path: '/four',
     meta: {
       title: '四叶'
     }
   },
   {
     name: 'five',
-    path: '/num/five',
+    path: '/five',
     meta: {
       title: '五叶'
     }
@@ -77,7 +79,6 @@ const handleClose = (key, keyPath) => { }
   width: 200px;
   text-align: left;
   line-height: 30px;
-  background-color:#fff;
 }
 .logoC:hover {
   cursor: pointer;

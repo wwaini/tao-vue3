@@ -20,13 +20,12 @@
       </div>
     </div>
     <draw ref="drawRef" />
-
   </div>
 </template>
 <script setup>
 import leftMenu from '@layout/leftMenu.vue'
 import rightMiddleTags from '@layout/rightMiddleTags.vue'
-import rightTopBerad from '@layout/rightTopBerad.vue'
+import rightTopBread from '@layout/rightTopBread.vue'
 
 </script>
 
@@ -38,7 +37,6 @@ import rightTopBerad from '@layout/rightTopBerad.vue'
   box-sizing: border-box;
   display: flex;
   position: relative;
-  background-color: #75b9ff;
 
   .left {
     width: auto;
@@ -46,9 +44,9 @@ import rightTopBerad from '@layout/rightTopBerad.vue'
     overflow-y: auto;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
-    // box-shadow: rgb(0, 0, 0, 15%) 1.95px 1.95px 2.6px;
-    // position: relative;
-    // z-index: 999999;
+    box-shadow: rgb(0, 0, 0, 15%) 1.95px 1.95px 2.6px;
+    position: relative;
+    z-index: 999999;
   }
 
   .left::-webkit-scrollbar {
