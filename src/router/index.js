@@ -49,42 +49,6 @@ const routes = [
       },
     ]
   },
-  // {
-  //   path: "/",
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: "one",
-  //       name: "one",
-  //       component: () => import("@view/num/one.vue"),
-  //       meta: { title: '一页', icon: 'dashboard', affix: true }
-  //     },
-  //     {
-  //       path: "two",
-  //       name: "two",
-  //       component: () => import("@view/num/two.vue"),
-  //       meta: { title: '二页', icon: 'dashboard', affix: true }
-  //     },
-  //     {
-  //       path: "three",
-  //       name: "three",
-  //       component: () => import("@view/num/three.vue"), // 建议进行路由懒加载，优化访问性能
-  //       meta: { title: '三页', icon: 'dashboard', affix: true }
-  //     },
-  //     {
-  //       path: "four",
-  //       name: "four",
-  //       component: () => import("@view/num/four.vue"),
-  //       meta: { title: '四页', icon: 'dashboard', affix: true }
-  //     },
-  //     {
-  //       path: "five",
-  //       name: "five",
-  //       component: () => import("@view/num/five.vue"),
-  //       meta: { title: '五页', icon: 'dashboard', affix: true }
-  //     },
-  //   ]
-  // },
   {
     path: '/401',
     component: () => import('@view/error/401.vue'),

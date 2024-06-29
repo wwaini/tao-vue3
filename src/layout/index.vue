@@ -12,9 +12,16 @@
         </div>
         <div class="rightBottomContent">
           <transition name="fade-transform" mode="out-in">
-            <!-- <keep-alive :include="cachedViews"> -->
-            <router-view />
-            <!-- </keep-alive> -->
+            <!-- KeepAlive这个缓存组件❤ -->
+            <!-- <KeepAlive :include="['one']"> -->
+              <router-view />
+            <!-- </KeepAlive> -->
+
+            <!-- <router-view v-slot={Component}>
+                <keep-alive :exclude="['one']">
+                    <component :is="Component" />
+                </keep-alive>
+            </router-view> -->
           </transition>
         </div>
       </div>
@@ -23,10 +30,15 @@
   </div>
 </template>
 <script setup>
-import leftMenu from '@layout/leftMenu.vue'
-import rightMiddleTags from '@layout/rightMiddleTags.vue'
-import rightTopBread from '@layout/rightTopBread.vue'
+import one from '@view/num/one.vue';
 
+import leftMenu from '@layout/leftMenu.vue';
+import rightMiddleTags from '@layout/rightMiddleTags.vue';
+import rightTopBread from '@layout/rightTopBread.vue';
+import {reactive} from 'vue';
+const cachedViews = reactive([
+  'one','two'
+])
 </script>
 
 

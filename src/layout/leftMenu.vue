@@ -1,16 +1,16 @@
 <template>
   <div class="title-center left-bg">
-    <img v-if="isShowMenuIcon" :src="logoSrc" class="logoC" />
-    <span>周小姐</span>
+    <img :src="logoSrc" class="logoC" />
+    <span v-show="!col.isCollapse">周小姐</span>
   </div>
   <el-menu :default-active="route.path" class="el-menu-vertical-demo left-bg" @open="handleOpen" @close="handleClose"
-    :background-color="theme_bgColor" router :collapse="isCollapse" text-color="auto" active-text-color="auto">
+    :background-color="theme_bgColor" router :collapse="col.isCollapse" text-color="auto" active-text-color="auto">
     <el-menu-item index="/">
-      <i class="el-icon-s-home"></i>
+      <el-icon><HomeFilled /></el-icon>
       <span slot="title">Home</span>
     </el-menu-item>
     <el-menu-item v-for="(item, index) in routeArr" :key="item.name" :index="item.path">
-      <i class="el-icon-eleme"></i>
+      <el-icon><component :is="item.meta.icon"></component></el-icon>
       <span slot="title">{{ item.meta.title }}</span>
     </el-menu-item>
   </el-menu>
@@ -19,42 +19,44 @@
 import { ref, reactive } from "vue";
 import { useRoute } from "vue-router";
 import logoSrc from "@asset/logo.jpg";
-const isShowMenuIcon = ref(true)
+import { useCollapseStore } from '@store/isCollapse'
+// 可以在组件中的任意位置访问 `store` 变量 ✨
+const col = useCollapseStore()
 const route = useRoute()
 const routeArr = reactive([
   {
     name: 'one',
     path: '/one',
     meta: {
-      title: '一叶'
+      title: '一叶',icon:'Promotion'
     }
   },
   {
     name: 'two',
     path: '/two',
     meta: {
-      title: '二叶'
+      title: '二叶',icon:'Promotion'
     }
   },
   {
     name: 'three',
     path: '/three',
     meta: {
-      title: '三叶'
+      title: '三叶',icon:'Promotion'
     }
   },
   {
     name: 'four',
     path: '/four',
     meta: {
-      title: '四叶'
+      title: '四叶',icon:'Promotion'
     }
   },
   {
     name: 'five',
     path: '/five',
     meta: {
-      title: '五叶'
+      title: '五叶',icon:'Promotion'
     }
   },
 ])
@@ -75,9 +77,10 @@ const handleClose = (key, keyPath) => { }
   }
 }
 .title-center {
-  padding-top: 15px;
-  width: 200px;
-  text-align: left;
+  padding: 15px 0 0 10px;
+  width: calc(100% - 1px);
+  // text-align: left;
+  display:flex;
   line-height: 30px;
 }
 .logoC:hover {
@@ -98,5 +101,10 @@ const handleClose = (key, keyPath) => { }
 }
 .el-menu-vertical-demo[data-v-8431c9bc]:not(.el-menu--collapse) {
   border: 0;
+  height: 100vh;
+}
+.el-menu{
+  height: 100vh;
+
 }
 </style>
