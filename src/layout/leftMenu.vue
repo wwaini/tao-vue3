@@ -4,7 +4,7 @@
     <span v-show="!col.isCollapse">周小姐</span>
   </div>
   <el-menu :default-active="route.path" class="el-menu-vertical-demo left-bg" @open="handleOpen" @close="handleClose"
-    :background-color="theme_bgColor" router :collapse="col.isCollapse" text-color="auto" active-text-color="auto">
+    background-color="#ffffff" router :collapse="col.isCollapse" text-color="auto" active-text-color="auto">
     <el-menu-item index="/">
       <el-icon><HomeFilled /></el-icon>
       <span slot="title">Home</span>

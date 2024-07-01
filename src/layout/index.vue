@@ -11,34 +11,30 @@
           <i class="el-icon-setting"></i>
         </div>
         <div class="rightBottomContent">
-          <transition name="fade-transform" mode="out-in">
-            <!-- KeepAlive这个缓存组件❤ -->
-            <!-- <KeepAlive :include="['one']"> -->
-              <router-view />
-            <!-- </KeepAlive> -->
-
-            <!-- <router-view v-slot={Component}>
-                <keep-alive :exclude="['one']">
-                    <component :is="Component" />
+          <router-view v-slot="{ Component }">
+            <transition name="fade-transform" mode="out-in">
+              <div>
+                <keep-alive>
+                  <component :is="Component"/>
                 </keep-alive>
-            </router-view> -->
-          </transition>
+              </div>
+            </transition>
+          </router-view>
         </div>
       </div>
     </div>
-    <draw ref="drawRef" />
+    <!-- <draw ref="drawRef" /> -->
   </div>
 </template>
 <script setup>
-import one from '@view/num/one.vue';
+import { useRoute } from 'vue-router';
 
 import leftMenu from '@layout/leftMenu.vue';
 import rightMiddleTags from '@layout/rightMiddleTags.vue';
 import rightTopBread from '@layout/rightTopBread.vue';
-import {reactive} from 'vue';
-const cachedViews = reactive([
-  'one','two'
-])
+
+const route = useRoute()
+console.log('route---',route);
 </script>
 
 
