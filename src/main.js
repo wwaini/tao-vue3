@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import { useRoute, useRouter } from 'vue-router';
 import { createPinia } from 'pinia'
 import { testFn1, testFn, testName, testName1 } from './utils/test.js';
 import showLoading from './components/myLoading/index.js'

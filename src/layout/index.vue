@@ -7,15 +7,15 @@
       <right-top-bread></right-top-bread>
       <right-middle-tags></right-middle-tags>
       <div class="rightBottom">
-        <div class="setting" @click="showDrawFn">
+        <!-- <div class="setting" @click="showDrawFn">
           <i class="el-icon-setting"></i>
-        </div>
+        </div> -->
         <div class="rightBottomContent">
           <router-view v-slot="{ Component }">
             <transition name="fade-transform" mode="out-in">
               <div>
                 <keep-alive>
-                  <component :is="Component"/>
+                  <component :is="Component" />
                 </keep-alive>
               </div>
             </transition>
@@ -34,7 +34,7 @@ import rightMiddleTags from '@layout/rightMiddleTags.vue';
 import rightTopBread from '@layout/rightTopBread.vue';
 
 const route = useRoute()
-console.log('route---',route);
+console.log('route---', route);
 </script>
 
 

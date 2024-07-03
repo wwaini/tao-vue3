@@ -1,6 +1,6 @@
 <template>
   <div>
-    right-middle
+    <!-- right-middle -->
   </div>
 </template>
 <script setup>
