@@ -3,8 +3,9 @@
   <h4>修改innerText自定义指令</h4>
   <div>{{ originalText }}</div>
   <div v-taohtml="customText">{{ originalText }}</div>
-
+  <br>
   <hr class="my-4" />
+  <br>
   <h4>修改分页器Go文字自定义指令</h4>
   <div class="demo-pagination-block">
     <div class="demonstration">Jump to</div>

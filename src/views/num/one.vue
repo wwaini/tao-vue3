@@ -1,3 +1,4 @@
+<!-- requestAnimationFrame动画 -->
 <template>
   <div class="btn">
     <el-button @click="goStart">开始</el-button>
