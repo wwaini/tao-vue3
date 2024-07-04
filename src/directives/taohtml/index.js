@@ -3,9 +3,9 @@
 export default {
   // 绑定即触发，el为DOM元素，binding能读取元素上绑定的各内容集合的对象
   mounted(el, binding) {
-    console.log(el)
+    // console.log(el)
     // <div>周小姐∝</div>
-    console.log(binding)
+    // console.log(binding)
     // {
     //     "dir": {},
     //     "instance": {},
