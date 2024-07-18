@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite  --mode development",
     "build": "vite build --mode production",
-    "start": "vite --mode production",
+    "builds": "node program/ssh.js && vite build --mode production",
+    "start": "node program/nodeTab.js && vite --mode production",
     "build:env": "vite build --mode development"
   },
   "author": "",
@@ -27,7 +28,11 @@
     "axios": "^1.7.2",
     "echarts": "^5.5.1",
     "element-plus": "^2.7.5",
+    "fs": "^0.0.1-security",
+    "inquirer": "^10.0.1",
+    "ora": "^8.0.1",
     "pinia": "^2.1.7",
+    "ssh2-sftp-client": "^10.0.3",
     "vue": "^3.4.29",
     "vue-router": "^4.0.13",
     "xgplayer": "^3.0.18"
