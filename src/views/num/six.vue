@@ -2,7 +2,7 @@
   <template>
     <div class="m-4">
       <p>default</p>
-      <el-select v-model="value" v-loadmore="loadmore" :popper-append-to-body="true">
+      <el-select v-model="value" v-loadmore="loadmore" :popper-append-to-body="false">
         <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
       </el-select>
     </div>
