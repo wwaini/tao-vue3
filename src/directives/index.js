@@ -2,9 +2,10 @@
 import taohtml from "./taohtml"
 import layload from "./layload"
 import pagi from "./pagi"
+import loadmore from "./loadmore"
 // 自定义指令对象，用于遍历注册
 const directives = {
-  taohtml, layload, pagi
+  taohtml, layload, pagi, loadmore
 }
 // 批量注册指令并暴露到main.js中去便于注册
 export default {

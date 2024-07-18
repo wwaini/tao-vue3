@@ -18,34 +18,40 @@ const routes = [
         meta: { title: '首页', icon: 'dashboard', affix: true }
       },
       {
-        path: "one",
-        name: "one",
+        path: "requestAnimationFrame",
+        name: "requestAnimationFrame",
         component: () => import("@view/num/one.vue"),
-        meta: { title: '一页', icon: 'dashboard', affix: true }
+        meta: { title: '定时器和requestAnimationFrame', icon: 'dashboard', affix: true }
       },
       {
-        path: "two",
-        name: "two",
+        path: "directives",
+        name: "directives",
         component: () => import("@view/num/two.vue"),
-        meta: { title: '二页', icon: 'dashboard', affix: true }
+        meta: { title: '自定义指令', icon: 'dashboard', affix: true }
       },
       {
-        path: "three",
-        name: "three",
+        path: "tab-nums",
+        name: "tab-nums",
         component: () => import("@view/num/three.vue"), // 建议进行路由懒加载，优化访问性能
-        meta: { title: '三页', icon: 'dashboard', affix: true }
+        meta: { title: '按Tab键切换', icon: 'dashboard', affix: true }
       },
       {
-        path: "four",
-        name: "four",
+        path: "Echart",
+        name: "Echart",
         component: () => import("@view/num/four.vue"),
-        meta: { title: '四页', icon: 'dashboard', affix: true }
+        meta: { title: 'Echart', icon: 'dashboard', affix: true }
       },
       {
-        path: "five",
-        name: "five",
+        path: "xgplayer",
+        name: "xgplayer",
         component: () => import("@view/num/five.vue"),
-        meta: { title: '五页', icon: 'dashboard', affix: true }
+        meta: { title: 'xgplayer视频用法', icon: 'dashboard', affix: true }
+      },
+      {
+        path: "my-select",
+        name: "my-select",
+        component: () => import("@view/num/six.vue"),
+        meta: { title: '下拉框触底加载自定义指令', icon: 'dashboard', affix: true }
       },
     ]
   },
