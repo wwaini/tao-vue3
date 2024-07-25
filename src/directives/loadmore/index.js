@@ -3,13 +3,12 @@ import { debounce } from "lodash";
 
 export default {
   mounted(el, binding) {
-    let scrollWrap = document.querySelector('.el-scrollbar__wrap')
+    let scrollWrap = el.querySelector('.el-scrollbar__wrap')
     // 把监听的句柄防抖一下
     const handle = debounce((e) => {
       let scrollDistance = scrollWrap.scrollHeight - scrollWrap.scrollTop
       // 比如此处预留6个像素的位置用于触底
       if (scrollWrap.clientHeight + 6 > scrollDistance) {
-        console.log(scrollWrap.clientHeight, scrollDistance);
         binding.value() // 触底通知一下，外界
       }
     }, 170)
