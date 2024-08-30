@@ -70,6 +70,13 @@ const routeArr = reactive([
       title: '下拉框触底加载自定义指令', icon: 'Promotion'
     }
   },
+  {
+    name: 'dblclick',
+    path: '/dblclick',
+    meta: {
+      title: '左键双击表格可编辑', icon: 'Promotion'
+    }
+  },
 ])
 const handleOpen = (key, keyPath) => { }
 const handleClose = (key, keyPath) => { }

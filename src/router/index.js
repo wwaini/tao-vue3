@@ -53,6 +53,12 @@ const routes = [
         component: () => import("@view/num/six.vue"),
         meta: { title: '下拉框触底加载自定义指令', icon: 'dashboard', affix: true }
       },
+      {
+        path: "dblclick",
+        name: "dblclick",
+        component: () => import("@view/num/dblclick.vue"),
+        meta: { title: '左键双击表格可编辑', icon: 'dashboard', affix: true }
+      },
     ]
   },
   {
