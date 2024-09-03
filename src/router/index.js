@@ -59,6 +59,12 @@ const routes = [
         component: () => import("@view/num/dblclick.vue"),
         meta: { title: '左键双击表格可编辑', icon: 'dashboard', affix: true }
       },
+      {
+        path: "rightMenu",
+        name: "rightMenu",
+        component: () => import("@view/num/rightMenu.vue"),
+        meta: { title: '右键菜单功能', icon: 'dashboard', affix: true }
+      },
     ]
   },
   {

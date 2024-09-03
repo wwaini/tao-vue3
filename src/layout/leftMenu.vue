@@ -77,6 +77,13 @@ const routeArr = reactive([
       title: '左键双击表格可编辑', icon: 'Promotion'
     }
   },
+  {
+    name: 'rightMenu',
+    path: '/rightMenu',
+    meta: {
+      title: '右键菜单功能', icon: 'Promotion'
+    }
+  },
 ])
 const handleOpen = (key, keyPath) => { }
 const handleClose = (key, keyPath) => { }
