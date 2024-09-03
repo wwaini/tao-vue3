@@ -3,8 +3,8 @@
   <div id="rightMenu">
     <ul class="table-right-menu">
       <li @click="fn1(item)" v-for="(item) in textList" :key="item.text">
-        <el-icon :size="20">
-          <Edit v-if="item.icon === 'edit'" />
+        <el-icon :size="15">
+          <View v-if="item.icon === 'view'" />
           <Edit v-if="item.icon === 'edit'" />
         </el-icon>
         {{ item.text }}
@@ -64,6 +64,7 @@ watch(
   display: none;
   background: #fff;
   box-shadow: 0 0 10px #ccc;
+  border-radius: 5px;
 
   .table-right-menu {
     line-height: 30px;
