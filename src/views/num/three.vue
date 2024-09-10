@@ -7,14 +7,14 @@
     <br>
     <br>
   </div>
-  <el-input v-model="num1"></el-input>
-  <el-input v-model="num2"></el-input>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+
 const num1 = ref(1)
 const num2 = ref(2)
+
 const scoreArr = ref([
   {
     "qid": 1124663333216773,
@@ -53,7 +53,6 @@ const inputNumRefs = ref([])
 
 // 第一个获取焦点的索引
 let starIndex = 0
-
 // 调用数字输入框实例去获取焦点
 const setFirstFocus = (starIndex) => {
   inputNumRefs.value[starIndex].focus()
