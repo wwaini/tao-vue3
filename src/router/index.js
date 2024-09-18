@@ -32,7 +32,7 @@ const routes = [
       {
         path: "tab-nums",
         name: "tab-nums",
-        component: () => import("@view/num/three.vue"), // 建议进行路由懒加载，优化访问性能
+        component: () => import("@view/num/tabNums.vue"), // 建议进行路由懒加载，优化访问性能
         meta: { title: '按Tab键切换', icon: 'dashboard', affix: true }
       },
       {
