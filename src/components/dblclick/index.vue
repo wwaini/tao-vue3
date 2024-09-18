@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, nextTick, getCurrentInstance, defineEmits, reactive } from 'vue';
+import { ref, nextTick, getCurrentInstance } from 'vue';
 // 获取当前组件的实例
 const { proxy } = getCurrentInstance();
 const props = defineProps({
