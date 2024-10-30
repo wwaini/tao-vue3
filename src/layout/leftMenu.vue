@@ -84,6 +84,13 @@ const routeArr = reactive([
       title: '右键菜单功能', icon: 'Promotion'
     }
   },
+  {
+    name: 'tinymce',
+    path: '/tinymce',
+    meta: {
+      title: '富文本编辑器', icon: 'Promotion'
+    }
+  },
 ])
 const handleOpen = (key, keyPath) => { }
 const handleClose = (key, keyPath) => { }

@@ -65,6 +65,18 @@ const routes = [
         component: () => import("@view/num/rightMenu.vue"),
         meta: { title: '右键菜单功能', icon: 'dashboard', affix: true }
       },
+      {
+        path: "catalogue",
+        name: "catalogue",
+        component: () => import("@view/num/catalogue.vue"),
+        meta: { title: 'el-tree目录效果', icon: 'dashboard', affix: true }
+      },
+      {
+        path: "tinymce",
+        name: "tinymce",
+        component: () => import("@view/num/tinymce.vue"),
+        meta: { title: '富文本编辑器', icon: 'dashboard', affix: true }
+      },
     ]
   },
   {
